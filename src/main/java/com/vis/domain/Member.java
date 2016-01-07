@@ -12,13 +12,13 @@ import java.util.Date;
 public class Member {
 
     @Id
-    @Column(name = "VIS number")
-    private Long id;
+    @Column(name = "VIS_number")
+    private String id;
 
-    @Column(name = "First name")
+    @Column(name = "Name")
     private String name;
 
-    @Column(name = "Last name")
+    @Column(name = "Family_name")
     private String familyName;
 
     @Column(name = "Gender")
@@ -36,25 +36,25 @@ public class Member {
     @Column(name = "Phone")
     private String phoneNumber;
 
-    @Column(name = "Country of origin")
+    @Column(name = "Origin")
     private String origiin;
 
-    @Column(name = "Student type")
+    @Column(name = "Student_type")
     private String studentType;
 
-    @Column(name = "Accept data collection")
+    @Column(name = "Accept_data_collection")
     private boolean acceptsDataCollection;
 
-    @Column(name = "Can be shared")
+    @Column(name = "Can_be_shared")
     private boolean acceptsSharing;
 
-    @Column(name = "Length of membership")
+    @Column(name = "Length_of_membership")
     private String lengthMembership;
 
-    @Column(name = "Diet Restriction")
+    @Column(name = "Diet_restriction")
     private String dietRestriction;
 
-    @Column(name = "Date added")
+    @Column(name = "Date_added")
     private String dateAdded;
 
     public Member() {

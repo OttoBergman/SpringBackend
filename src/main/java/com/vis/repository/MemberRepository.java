@@ -6,6 +6,6 @@ import org.springframework.data.repository.CrudRepository;
 /**
  * Created by otto on 2016-01-07.
  */
-public interface MemberRepository extends CrudRepository<Member, Long> {
+public interface MemberRepository extends CrudRepository<Member, String> {
 
 }
