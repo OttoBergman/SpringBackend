@@ -1,5 +1,7 @@
 package com.vis.domain;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -11,18 +13,19 @@ import java.util.Date;
 @Table(name = "Event")
 public class Event {
         @Id
-        @GeneratedValue
+        @GenericGenerator(name="EventIdGen" , strategy="increment")
+        @GeneratedValue(generator = "EventIdGen")
         @Column(name = "EventID")
         private long eventID;
 
         @Column(name = "Name")
         private String Name;
 
-        @Column(name = "Start_date")
-        private Date startDate;
+        @Column(name = "Start_date", columnDefinition = "varchar(256)")
+        private String startDate;
 
-        @Column(name = "End_date")
-        private Date endDate;
+        @Column(name = "End_date", columnDefinition = "varchar(256)")
+        private String endDate;
 
         @Column(name = "Price")
         private int price;
@@ -61,19 +64,19 @@ public class Event {
         Name = name;
     }
 
-    public Date getStartDate() {
+    public String getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(Date startDate) {
+    public void setStartDate(String startDate) {
         this.startDate = startDate;
     }
 
-    public Date getEndDate() {
+    public String getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(Date endDate) {
+    public void setEndDate(String endDate) {
         this.endDate = endDate;
     }
 
